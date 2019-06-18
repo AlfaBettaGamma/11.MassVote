@@ -5,6 +5,8 @@ def MassVote(N, Votes):
   res = []
   sort = []
   fin = ''
+  if N == 1:
+    return 'majority winner 1'
   if N == len(Votes):
     for i in range(N):
       if Votes[i] < 0:
@@ -41,4 +43,6 @@ def test1():
 def test2():
   MassVote(4,[10, -10, 60, 15, 5])
     
+def test3():
+  MassVote(1,[10])
 test1()
